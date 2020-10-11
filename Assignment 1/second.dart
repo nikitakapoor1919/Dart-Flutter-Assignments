@@ -11,5 +11,20 @@ Output For each test case, print “BOYS” without quotes if it’s a boy’s
  */
 
 void main(){
+  List<int> robes1=[3,4,2,3,1,3,3,1,2,1,2,1,3];
+  
+  int TestCases=robes1[0];
+  int count=0;
+  robes1.removeAt(0); // Remove Test Cases count from List
+  while(count<TestCases){
+    int i=robes1[0];//robes1[0] contain count of number of people in party
+    List<int> list=robes1.sublist(1,i+1);// Create new sublist of particular Test case
+    if(list.length==list.toSet().length) // Convert List to Set and check length of list and set
+      print("BOYS");
+    else
+      print("GIRLS");
+    count++;  //Iterate to Next Test case
+    robes1=robes1.sublist(i+1);//Remove first Test Case Elements from list
+  }
 
 }

@@ -6,10 +6,11 @@ For example int the array {300,40,60,90,100,12,16, 17, 4, 3, 5, 2}, leaders are 
 */
 
 findLeader(List list){
+  int j;
   print(list[0]); //rightmost element is always a leader
   for (int i = 1; i < list.length; i++) 
   { 
-        for (int j = i+1; j < list.length; j++) 
+        for (j = i+1; j < list.length; j++) 
         { 
             if (list[i] < list[j]) 
                 break; 
